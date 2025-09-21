@@ -27,5 +27,5 @@ jobs:
         run: >
           npx ng build 
           --configuration=production 
-          --base-href / 
+          --base-href /Nature/ 
           --output-path "C:\Nature"
