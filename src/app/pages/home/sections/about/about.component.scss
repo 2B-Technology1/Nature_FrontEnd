@@ -1,0 +1,28 @@
+.about {
+
+
+    & .before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-height: 100%
+    }
+
+    .cards-container {
+        height: 650px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+    }
+
+    & .after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-height: 100%
+    }
+
+
+}

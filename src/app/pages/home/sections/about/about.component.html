@@ -1,0 +1,17 @@
+<section class="about">
+    <img class="before" src="assets/images/pages/Vector (2).png" alt="before" />
+
+    <app-sections-title [isAnimated]="true" [animationDir]="'down'">
+        <span [innerHTML]="'ABOUT.TITLE' | translate"></span>
+    </app-sections-title>
+
+    <div class="cards-container wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
+        @for (card of companies.companies; let i = $index; track i) {
+        <app-about-card [card]="card" [otherInfo]="{ cardIndex: i, numOfCards: companies.companies.length }"
+            [centerIndex]="centerIndex" (select)="setCenter($event)">
+        </app-about-card>
+        }
+    </div>
+
+    <img src="assets/images/pages/Frame 509.png" alt="after" class="after">
+</section>

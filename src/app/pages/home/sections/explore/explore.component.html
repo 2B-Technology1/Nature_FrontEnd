@@ -1,0 +1,23 @@
+<section class="explore">
+
+
+    <img src="assets/images/pages/Frame 541.png" alt="before" class="before">
+
+    <app-sections-title [isAnimated]="true" [animationDir]="'up'">
+        <span [innerHTML]="'explore.title' | translate"></span>
+    </app-sections-title>
+
+
+    <div class="cards-container">
+        <owl-carousel-o class="explore-cards" [options]="carouselOptions()">
+            @for (card of exploreCards; track $index) {
+            <ng-template carouselSlide>
+                <app-explore-card [card]="card"></app-explore-card>
+            </ng-template>
+            }
+        </owl-carousel-o>
+    </div>
+
+    <img src="assets/images/pages/Frame 509.png" alt="before" class="after">
+
+</section>

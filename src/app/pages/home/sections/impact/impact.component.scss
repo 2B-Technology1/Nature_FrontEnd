@@ -1,0 +1,41 @@
+.impact {
+    background-color: var(--color-light-blue-100);
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+    position: relative;
+
+    & .before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-height: 100%
+    }
+
+    & .sec-title {
+        font-family: var(--font-family-bryant), sans-serif;
+        font-weight: var(--font-weight-500);
+        font-style: Medium Alternate;
+        font-size: 46px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        width: auto;
+    }
+
+    & .cards-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    & .after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-height: 100%
+    }
+}

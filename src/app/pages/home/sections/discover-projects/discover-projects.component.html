@@ -1,0 +1,15 @@
+<section class="projects" [dir]="language.language() === 'en' ? 'ltr' : 'rtl'">
+
+    <img src="assets/images/pages/Frame 541.png" alt="frame-541" class="before-top">
+    <img src="assets/images/pages/Frame 560.png" alt="frame-560" class="before-bottom">
+
+    <app-sections-title [animationDir]="'up'" [isAnimated]="true">
+        <span [innerHTML]="'PROJECTS.TITLE' | translate"></span>
+    </app-sections-title>
+
+    <app-countries-map (country)="setCountry($event)"></app-countries-map>
+
+    <app-projects-container [countryProject]="projects"></app-projects-container>
+
+    <img src="assets/images/pages/Frame 509.png" alt="frame-509" class="after">
+</section>

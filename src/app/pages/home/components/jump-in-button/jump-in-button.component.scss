@@ -1,0 +1,39 @@
+.jump-in-btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    width: 48px;
+    height: 48px;
+    box-shadow: 0px 3.6px 7.2px 0px #0000001A;
+    background: linear-gradient(180deg, #82C672 0%, #B0D357 100%);
+    transition: all .5s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .btn-text {
+        display: none;
+        font-size: smaller;
+        transition: display .3s ease-in;
+    }
+
+    & .btn-icon {
+        transition: display .3s ease-in;
+    }
+
+    &:hover {
+        background: #fff;
+        border: 1px solid #B0D357;
+
+        & .btn-icon {
+            display: none;
+        }
+
+        & .btn-text {
+            display: block;
+            color: #82C672;
+            white-space: nowrap;
+        }
+    }
+}

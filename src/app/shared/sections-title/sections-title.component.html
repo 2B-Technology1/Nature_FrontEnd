@@ -1,0 +1,8 @@
+<h2 [ngClass]="{
+    'sec-title': true,
+    'wow animate__animated': isAnimated,
+    'animate__fadeInUp': isAnimated && animationDir === 'up',
+    'animate__fadeInDown': isAnimated && animationDir === 'down'
+  }">
+    <ng-content></ng-content>
+</h2>

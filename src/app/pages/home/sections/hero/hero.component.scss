@@ -1,0 +1,277 @@
+.hero-container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgb(255, 255, 255), transparent 50%);
+        pointer-events: none;
+    }
+
+    & .base {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    & .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        color: #fff;
+        font-family: var(--font-family-bryant), sans-serif;
+
+
+        & h1 {
+            font-weight: 700;
+            font-size: 56px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            transition: all 1s ease-in-out;
+        }
+
+        & p {
+            font-weight: 400;
+            font-size: var(--font-size-26);
+            line-height: 100%;
+            letter-spacing: 0%;
+
+        }
+    }
+
+    & button {
+        background: linear-gradient(90deg, #82C672 0%, #B0D357 100%);
+        border: none;
+        border-radius: 16px;
+        padding: 24px 57px;
+        font-weight: var(--font-weight-600);
+        font-size: var(--font-size-18);
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: var(--color-grey-2000);
+        cursor: pointer;
+        transition: all 1.5s ease-in;
+
+        &.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    & i {
+        font-size: 40px;
+        background: -webkit-linear-gradient(90deg, #82C672 0%, #B0D357 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+        transition: all 3.5s ease-in;
+
+
+        &.show {
+            opacity: 1;
+            animation: arrow-animate 1.5s ease-in-out infinite;
+
+        }
+    }
+
+
+
+
+
+
+
+    & .overlap {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        opacity: 0;
+        clip-path: circle(0% at 50% 50%);
+        transition: all 1.5s ease-in;
+
+        &.active {
+            clip-path: circle(150% at 50% 50%);
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes arrow-animate {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+// @use 'sass:math';
+
+// $n: 18;
+// $m: (
+// );
+
+// $r: 50%/(1 + 1/math.sin(180deg/$n));
+// $d: 50%/(math.tan(180deg/$n) + 1/math.cos(180deg/$n));
+
+// $m: append($m, from 50% + $d*math.cos(0) 50% + $d*math.sin(0), comma);
+
+// @for $i from 1 through $n {
+//     $m: append($m,
+//             arc to 50% + $d*math.cos($i*360deg/$n) 50% + $d*math.sin($i*360deg/$n) of $r,
+//             comma);
+// }
+
+// .hero-container {
+//     width: 100%;
+//     height: 100vh;
+//     position: relative;
+//     overflow: hidden;
+
+
+//     & .base {
+//         width: 100%;
+//         height: 100%;
+//     }
+
+//     & button {
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//         transition: opacity .3s linear, visibility .3s linear;
+//         z-index: 1001;
+
+//         &.hide {
+//             opacity: 0;
+//             visibility: hidden;
+//         }
+//     }
+
+//     & .overlap {
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//         width: 200px;
+//         overflow: hidden;
+//         aspect-ratio: 1;
+//         background: linear-gradient(45deg, #355C7D, #68B3AF);
+//         opacity: 0;
+//         clip-path: shape(#{$m});
+//         transition: all 1.5s ease-in;
+
+//         &.active {
+//             opacity: 1;
+//             // clip-path: circle(150% at 50% 50%);
+//             // transform: translate(-50%, -50%) scale(5);
+//             width: 100%;
+//         }
+//     }
+// }
+
+
+
+
+// @use 'sass:math';
+// //num of small circles
+// $n: 18;
+// $m: (
+// );
+// // reduis
+// $r: 50%/(1 + 1/math.sin(180deg/$n));
+// $d: 50%/(math.tan(180deg/$n) + 1/math.cos(180deg/$n));
+// // start point
+// $m: append($m , from 50% 50%);
+
+// @for $i from 1 through $n {
+//     $m: append($m,
+//             arc to 50% + $d*math.cos($i*360deg/$n) 50% + $d*math.sin($i*360deg/$n) of $r,
+//             comma);
+// }
+
+// .hero-container {
+//     width: 100%;
+//     height: 100vh;
+//     position: relative;
+//     overflow: hidden;
+
+//     & .base {
+//         width: 100%;
+//         height: 100%;
+//     }
+
+//     & button {
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//         transition: opacity .3s linear, visibility .3s linear;
+//         z-index: 1001;
+
+//         &.hide {
+//             display: none;
+//         }
+//     }
+
+//     & .overlap {
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//         width: 200px;
+//         aspect-ratio: 1;
+//         background: linear-gradient(45deg, #355C7D, #68B3AF);
+//         opacity: 0;
+//         clip-path: shape(#{$m});
+
+//         &.active {
+//             animation: flowerSpring 1.5s ease-out forwards;
+//         }
+//     }
+// }
+
+// @keyframes flowerSpring {
+//     0% {
+//         opacity: 0;
+//         clip-path: shape(#{$m});
+//         transform: translate(-50%, -50%) scale(0.6);
+//     }
+
+//     40% {
+//         opacity: 1;
+//         clip-path: shape(#{$m});
+//         transform: translate(-50%, -50%) scale(1.2);
+//     }
+
+//     70% {
+//         clip-path: shape(#{$m});
+//         transform: translate(-50%, -50%) scale(1.5);
+//     }
+
+//     100% {
+//         clip-path: shape(#{$m});
+//         transform: translate(-50%, -50%) scale(8);
+//         opacity: 1;
+//     }
+// }

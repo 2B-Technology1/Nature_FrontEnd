@@ -1,0 +1,32 @@
+<section class="meet-our">
+    <img src="assets/images/pages/Frame 560.png" alt="Frame 560" class="before">
+
+    <app-sections-title [isAnimated]="true" [animationDir]="'up'">
+        <span [innerHTML]="'partners.title' | translate"></span>
+    </app-sections-title>
+
+    @if (partners.partners && partners.partners.length > 0) {
+    <div class="sliders-container wow animate__animated animate__fadeInUp">
+        <div class="slider-1">
+            @for (company of partners.partners; track $index) {
+            <div class="img-container">
+                <img [src]="company.partnerLogo" [alt]="company.partnerName" />
+            </div>
+            }
+        </div>
+
+        <div class="slider-2">
+            @for (company of partners.partners; track $index) {
+            <div class="img-container">
+                <img [src]="company.partnerLogo" [alt]="company.partnerName" />
+            </div>
+            }
+        </div>
+    </div>
+    } @else {
+    <div class="empty-state wow animate__animated animate__fadeInUp">
+        <img src="assets/images/pages/no-partners.png" alt="no partners">
+        <p>{{ 'partners.empty' | translate }}</p>
+    </div>
+    }
+</section>

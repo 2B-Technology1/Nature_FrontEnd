@@ -1,0 +1,41 @@
+:host ::ng-deep {
+    .p-button {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+    }
+
+    .p-tieredmenu {
+        top: calc(100% + 4px) !important;
+        left: inherit !important;
+    }
+
+    .p-tieredmenu-root-list,
+    .p-tieredmenu-submenu {
+        background: var(--color-neutral-100);
+        border-radius: 8px;
+        padding: 8px;
+        box-shadow: -8px 8px 16px 0px #00000033;
+        gap: 16px;
+
+
+        & .p-tieredmenu-item-link {
+            font-family: var(--font-family-primary), sans-serif;
+            font-weight: var(--font-weight-medium);
+            font-size: var(--font-size-2-xs);
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: var(--color-neutral-2000);
+            padding: 3.5px 8px;
+            transition: all .3s ease-out;
+
+            &:hover {
+                background-color: var(--color-dark-green-100);
+            }
+
+            & .p-icon {
+                color: var(--color-dark-green-400);
+            }
+        }
+    }
+}

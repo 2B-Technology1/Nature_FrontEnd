@@ -1,0 +1,53 @@
+{
+    "NAV": {
+        "OUR_COMPANIES": "Our Companies",
+        "OUR_SERVICES": "Our Services",
+        "OUR_PROJECTS": "Our Projects",
+        "OUR_STORY": "Our Story",
+        "RESOURCES": "Resources",
+        "GET_IN_TOUCH": "Get in Touch"
+    },
+    "HERO": {
+        "TITLE": "Restoring Nature",
+        "SUBTITLE": "Regenerating Ecosystems. Rethinking Impact",
+        "BUTTON": "Make it Green"
+    },
+    "ABOUT": {
+        "TITLE": "Who We Are: United by Nature, <br> Driven by Purpose"
+    },
+    "PROJECTS": {
+        "TITLE": "Wherever you are, <br> Discover our Projects"
+    },
+    "explore": {
+        "title": "Explore Nature & <br> Stay Up to Date"
+    },
+    "impact": {
+        "title": "How our impact influenced <br> the world around us"
+    },
+    "partners": {
+        "title": "Meet our Strategic Partners, <br> Who Inspire our Purpose",
+        "empty": "🤝 Our partners will be announced soon."
+    },
+    "projects": {
+        "title": "Our Projects",
+        "jumpIn": "Jump In"
+    },
+    "errors": {
+        "videoNotSupported": "Your browser does not support video playback."
+    },
+    "buttons": {
+        "jumpIn": "Jump In"
+    },
+    "footer": {
+        "description": "Nature for Environmental and Agricultural Solutions L.L.C is the expertise house of terrestrial and marine biodiversity based in the city of Abu Dhabi. We specialize in sustainable planting and managing mangrove trees and reserves.",
+        "quickActions": {
+            "title": "Quick actions",
+            "links": {
+                "about": "About Us",
+                "services": "Services",
+                "projects": "Projects",
+                "contact": "Contact Us"
+            }
+        }
+    }
+}

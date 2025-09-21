@@ -1,0 +1,25 @@
+<footer>
+    <div>
+        <div class="logo">
+            <img src="assets/images/footer/image 1.png" alt="logo">
+        </div>
+        <p>
+            {{ 'footer.description' | translate }}
+        </p>
+        <div class="socials">
+            <img src="assets/images/footer/skill-icons_facebook.png" alt="Facebook">
+            <img src="assets/images/footer/skill-icons_instagram.png" alt="Instagram">
+            <img src="assets/images/footer/skill-icons_tiktok.png" alt="Tiktok">
+            <img src="assets/images/footer/skill-icons_youtube.png" alt="Youtube">
+        </div>
+    </div>
+
+    <div class="quick-access">
+        <h6>
+            {{ 'footer.quickActions.title' | translate }}
+        </h6>
+        @for (link of quickActionsLinks; track $index) {
+        <a>{{ 'footer.quickActions.links.' + link | translate }}</a>
+        }
+    </div>
+</footer>

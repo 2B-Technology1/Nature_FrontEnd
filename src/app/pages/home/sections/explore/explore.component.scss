@@ -1,0 +1,29 @@
+.explore {
+    background-color: var(--color-light-blue-100);
+
+
+    & .before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-height: 100%;
+    }
+
+    & .cards-container {
+        padding-left: 96px;
+        padding-right: 0;
+        padding-bottom: 16px;
+        padding-top: 16px;
+        z-index: 5;
+    }
+
+
+
+    & .after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-height: 100%;
+    }
+
+}

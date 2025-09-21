@@ -1,0 +1,86 @@
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    padding: 16px;
+    z-index: 10;
+
+    & .nav-content {
+        position: relative;
+        border-radius: 16px;
+        padding: 0 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0px 6px 12px 0px #0000001A;
+        background: white;
+
+        & .logo {
+            max-width: 96px;
+
+            & img {
+                width: 100%;
+            }
+        }
+
+        & .links {
+            display: flex;
+            padding: 16px 32px;
+            gap: 16px;
+            list-style-type: none;
+            align-items: center;
+
+            li {
+                font-family: var(--font-family-primary), sans-serif;
+                font-weight: var(--font-weight-medium);
+                font-size: var(--font-size-2-xs);
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: var(--color-neutral-2000);
+                transition: all .5s linear;
+            }
+
+            li:hover {
+                color: var(--color-primary-600);
+                padding: 0 16px;
+            }
+        }
+
+        & .actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            & button:first-child {
+                border-radius: 8px;
+                padding: 8px;
+                border: none;
+                background: linear-gradient(90deg, #82C672 0%, #82C672 100%);
+                cursor: pointer;
+                font-family: var(--font-family-primary), sans-serif;
+                font-weight: var(--font-weight-medium);
+                font-size: var(--font-size-2-xs);
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: var(--color-neutral-100);
+                transition: all .3s ease-out;
+
+                &:hover {
+                    background: linear-gradient(90deg, #82C672 0%, #B0D357 100%);
+                    padding: 8px 24px;
+                }
+            }
+
+            & button:last-child {
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+
+        }
+
+
+    }
+}

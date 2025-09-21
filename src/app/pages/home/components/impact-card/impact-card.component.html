@@ -1,0 +1,10 @@
+<div class="impact-card">
+    <div class="media">
+        <img [src]="card.impactLogo" [alt]="card.impactName"
+            (error)="fallbackLogo.handleErrorInImage($event , 'assets/images/pages/Frame 531.png')">
+    </div>
+    <div class="body">
+        <p>{{cardCounter()}}</p>
+        <p>{{card.impactName}}</p>
+    </div>
+</div>

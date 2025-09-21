@@ -1,0 +1,14 @@
+<section class="impact" [dir]="language.language() === 'en' ? 'ltr' : 'rtl' ">
+    <img class="before" src="assets/images/pages/Frame 541.png" alt="before" />
+
+    <app-sections-title [isAnimated]="false">
+        <span [innerHTML]="'impact.title' | translate"></span>
+    </app-sections-title>
+
+    <div class="cards-container">
+        @for (card of impact.impact; track $index) {
+        <app-impact-card [card]="card"></app-impact-card>
+        }
+    </div>
+    <img src="assets/images/pages/Frame 509.png" alt="after" class="after">
+</section>

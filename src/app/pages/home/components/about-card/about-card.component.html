@@ -1,0 +1,23 @@
+<div class="card" [ngClass]="getPositionClass()" (click)="handleSelectCard()"
+    [dir]="language.language() === 'en' ? 'ltr':'rtl'">
+    <div class="head">
+        <video autoplay loop muted playsinline (error)="mediaError.handleVedioError()">
+            <source [src]="`${baseStorageUrl}/${card.companyImage}`" type="video/mp4">
+            {{ 'errors.videoNotSupported' | translate }}
+        </video>
+        @if (card.companyName) {
+        <h2>{{ card.companyName }}</h2>
+        }
+    </div>
+    <div class="body">
+        <img *ngIf="card.companyLogo" [src]='`${baseStorageUrl}/${card.companyLogo}`' [alt]="card.companyName"
+            (error)="mediaError.handleErrorInImage($event , 'assets/images/pages/fallBackImg.png')">
+        <div class="content">
+            <h3>{{ card.companyName }}</h3>
+            <p>{{ card.companyDescription }}</p>
+        </div>
+        <div class="action">
+            <app-jump-in-button></app-jump-in-button>
+        </div>
+    </div>
+</div>

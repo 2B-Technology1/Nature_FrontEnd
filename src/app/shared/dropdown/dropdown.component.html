@@ -1,0 +1,5 @@
+<p-button (click)="menu.toggle($event)">
+    <span>{{title}}</span>
+    <i class="pi pi-angle-down"></i>
+</p-button>
+<p-tieredmenu #menu [model]="items" [popup]="true" />
