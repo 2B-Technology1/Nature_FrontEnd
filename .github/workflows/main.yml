@@ -1,0 +1,31 @@
+name: Build and Deploy Angular App (Production - Nature)
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: self-hosted  # Your Windows runner
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Clean Previous Build
+        run: Remove-Item -Recurse -Force "C:\Nature\*" -ErrorAction SilentlyContinue
+
+      - name: Build Angular App (Production - Nature)
+        run: >
+          npx ng build 
+          --configuration=production 
+          --base-href / 
+          --output-path "C:\Nature"
